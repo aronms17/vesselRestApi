@@ -57,16 +57,19 @@ class Position {
 	  this.receivedDate = receivedDate;
   }
   
+  // Converting the input latitude&longitude(degrees) to radians
   public void setLatitude(Float latitude) {
-	  this.latitude = latitude;
+	  this.latitude = (float) Math.toRadians(latitude);
   }
   
   public void setLongitude(Float longitude) {
-	  this.longitude = longitude;
+	  this.longitude = (float) Math.toRadians(longitude);
   }
   
+  
+  // Converting the input(knots) to m/s
   public void setSpeed(Float speed) {
-	  this.speed = speed;
+	  this.speed = (float) (speed * 0.514444);
   }
   
 }
